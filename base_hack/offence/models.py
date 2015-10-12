@@ -1,0 +1,30 @@
+from django.db import models
+
+class Batter(models.Model):
+    name_text = models.CharField(max_length=200)
+    team_text = models.CharField(max_length=200)
+    ave = models.IntegerField(default=0)
+    game = models.IntegerField(default=0)
+    plate_appearance = models.IntegerField(default=0)
+    at_bats = models.IntegerField(default=0)
+    hits = models.IntegerField(default=0)
+    _2b = models.IntegerField(default=0)
+    _3b = models.IntegerField(default=0)
+    homerun = models.IntegerField(default=0)
+    total_bases = models.IntegerField(default=0)
+    rbi = models.IntegerField(default=0)
+    runs_scored = models.IntegerField(default=0)
+    strikeouts = models.IntegerField(default=0)
+    bb = models.IntegerField(default=0)
+    db = models.IntegerField(default=0)
+    sh = models.IntegerField(default=0)
+    sf = models.IntegerField(default=0)
+    sb = models.IntegerField(default=0)
+    obp = models.IntegerField(default=0)
+    slg = models.IntegerField(default=0)
+    risp = models.IntegerField(default=0)
+    double_play = models.IntegerField(default=0)
+    error = models.IntegerField(default=0)
+    pub_date = models.DateTimeField('date published')
+    def __str__(self):
+        return self.name_text
